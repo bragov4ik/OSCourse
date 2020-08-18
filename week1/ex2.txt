@@ -1,0 +1,147 @@
+    1  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pinsudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pubsudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"sudo apt-get updatesudo apt-get -y install cuda
+    2  wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin
+    3  sudo mv cuda-ubuntu2004.pin /etc/apt/preferences.d/cuda-repository-pin-600
+    4  sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/7fa2af80.pub
+    5  sudo add-apt-repository "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/ /"
+    6  sudo apt-get update
+    7  sudo apt-get -y install cuda
+    8  sudo apt-get install libsnappy-dev
+    9  sudo apt-get install libgraphicsmagick1-dev
+   10  cuda
+   11  git clone https://github.com/torch/distro.git ~/torch --recursive
+   12  sudo apt-get install git
+   13  git clone https://github.com/torch/distro.git ~/torch --recursive
+   14  cd ~/torch; bash install-deps;
+   15  sudo apt-get install software-properties-common
+   16  cd ~/torch; bash install-deps;
+   17  cd installed-deps
+   18  cd ins
+   19  cd install-deps
+   20  vim
+   21  sudo snap install --classic code
+   22  code install-deps
+   23  cd ~/torch; bash install-deps;
+   24  sudo add-apt-repository ppa:rock-core/qt4
+   25  sudo apt-get update
+   26  sudo apt-get install libqtcore4
+   27  sudo apt-get install ipython
+   28  pip install ipython
+   29  python --version
+   30  python --version3
+   31  python3 --version
+   32  sudo apt install software-properties-common
+   33  sudo apt update
+   34  sudo apt -y upgrade
+   35  sudo apt install -y python3-pip
+   36  pip
+   37  pip3
+   38  pip3 install ipython
+   39  ./install.sh
+   40  cd ~/torch; bash install-deps;
+   41  echo $PATH
+   42  code ~/.bashrc
+   43  echo $HOME
+   44  export PATH="$HOME/.local/bin:$PATH"
+   45  ipython
+   46  ./install.sh
+   47  cd ~/torch; bash install-deps;
+   48  code install-deps
+   49  cd ~/torch; bash install-deps;
+   50  code install-deps
+   51  cd ~/torch; bash install-deps;
+   52  ipython
+   53  ipython qt4 qt5-webkit 
+   54  ipython --version
+   55  code install-deps
+   56  sudo code install-deps
+   57  code install-deps
+   58  cd ~/torch; bash install-deps;
+   59  apt-cache search ipython
+   60  zoom
+   61  whoami
+   62  hostname
+   63  man whoami
+   64  man --help
+   65  --help
+   66  less
+   67  head
+   68  ls
+   69  cd Downloads/
+   70  cd
+   71  cd Downloads/
+   72  ls
+   73  cd
+   74  cd 
+   75  Documents/
+   76  cd Documents/
+   77  ls
+   78  > test.txt
+   79  ls
+   80  vim test.txt
+   81  ./test.txt
+   82  test.tx
+   83  test.txt
+   84  sudo apt install vscode
+   85  sudo apt install code
+   86  snap install code
+   87  code
+   88  code text.txt
+   89  head text.txt 
+   90  tail text.txt
+   91  man head
+   92  head
+   93  tail
+   94  grep line text.tx
+   95  grep line text.txt
+   96  ls > text.txt
+   97  code text.txt 
+   98  head -n 2 < test.txt
+   99  head -n 2 < text.txt
+  100  code text.txt
+  101  head -n  < text.txt
+  102  head -n 3  text.txt
+  103  head -n 2 < text.txt
+  104  head -n 2 text.txt
+  105  ls | sort -r | tail -n 3
+  106  ls | sort -r | tail -n 1
+  107  ls | sort -r | tail -n 3
+  108  ls | tail -n 3
+  109  pwd
+  110  man pwd
+  111  man rm
+  112  man cat
+  113  ls
+  114  cat text.txt test.txt 
+  115  gedit
+  116  .
+  117  ~
+  118  snap install vlc
+  119  gedit
+  120  gedit &
+  121  jobs
+  122  fg %1
+  123  fg %1 -
+  124  fg %1
+  125  jobs
+  126  gedit &
+  127  jobs
+  128  fg %1
+  129  gedit
+  130  ~
+  131  cd ~
+  132  mkdit week1
+  133  mkdir week1
+  134  cd week1/
+  135  ls ~/usr/bin 
+  136  ls /usr/bin 
+  137  man sort
+  138  ls /usr/bin "
+
+  139  ls /usr/bin | sort -r | > ex1.txt
+  140  ls
+  141  code ex1.txt 
+  142  ls /usr/bin | sort -r | < ex1.txt
+  143  code ex1.txt 
+  144* ~~~
+  145  history
+  146  history > ex2.txt
