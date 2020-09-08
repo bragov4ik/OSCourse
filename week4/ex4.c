@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/types.h>
-#include <unistd.h>
 
 void create_args(char* input, char *** args) {
     char* inputcpy;
@@ -36,13 +34,9 @@ int main(int argc, char const *argv[]) {
     char ** args = malloc(sizeof(char*));
     create_args(input, &args);
 
-    char * enve[1] = {NULL};
-
-    int parent_pid = getpid();
-    fork();
-    if (parent_pid != getpid()) {\
+    if (!fork()) {
         strcpy(input, args[0]);
-        execve(input, args, enve);
+        execvp(args[0], args);
     }
     return 0;
 }
