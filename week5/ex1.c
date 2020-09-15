@@ -22,7 +22,6 @@ int main() {
         else {
             printf("Main here! %d was just created! \n", thread_identifiers[i]);
         }
-        printf("Waiting for thread %d to join...\n");
     }
 
     for (int i = 0; i < N; i++) {
