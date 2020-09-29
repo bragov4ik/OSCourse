@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   3595	    632	      8	   4235	   108b	/home/bragov4ik/Documents/Studying/OS/week6/ex3
