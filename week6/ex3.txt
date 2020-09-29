@@ -1,0 +1,139 @@
+Test input (withound 2nd row for ex 1 and 2):
+10
+3
+0 1
+0 2
+0 4
+0 6
+0 8
+11 8
+11 6
+11 4
+11 2
+11 1
+
+FCFS:
+Process 0 (0, 1):	    CT:1	    TAT:1	    WT:0
+Process 1 (0, 2):	    CT:3	    TAT:3	    WT:1
+Process 2 (0, 4):	    CT:7	    TAT:7	    WT:3
+Process 3 (0, 6):	    CT:13	    TAT:13	    WT:7
+Process 4 (0, 8):	    CT:21	    TAT:21	    WT:13
+Process 5 (11, 8):	    CT:29	    TAT:18	    WT:10
+Process 6 (11, 6):	    CT:35	    TAT:24	    WT:18
+Process 7 (11, 4):	    CT:39	    TAT:28	    WT:24
+Process 8 (11, 2):	    CT:41	    TAT:30	    WT:28
+Process 9 (11, 1):	    CT:42	    TAT:31	    WT:30
+Avg TAT:17.600000
+Avg WT:13.400000
+
+SJF:
+Process 0 (0, 1):	    CT:1	    TAT:1	    WT:0
+Process 1 (0, 2):	    CT:3	    TAT:3	    WT:1
+Process 2 (0, 4):	    CT:7	    TAT:7	    WT:3
+Process 3 (0, 6):	    CT:13	    TAT:13	    WT:7
+Process 4 (0, 8):	    CT:34	    TAT:34	    WT:26
+Process 5 (11, 8):	    CT:42	    TAT:31	    WT:23
+Process 6 (11, 6):	    CT:26	    TAT:15	    WT:9
+Process 7 (11, 4):	    CT:20	    TAT:9	    WT:5
+Process 8 (11, 2):	    CT:16	    TAT:5	    WT:3
+Process 9 (11, 1):	    CT:14	    TAT:3	    WT:2
+Avg TAT:12.100000
+Avg WT:7.900000
+
+Round-robin:
+Process 0 (0, 1):	    CT:1	    TAT:1	    WT:0
+Process 1 (0, 2):	    CT:3	    TAT:3	    WT:1
+Process 2 (0, 4):	    CT:25	    TAT:25	    WT:21
+Process 3 (0, 6):	    CT:28	    TAT:28	    WT:22
+Process 4 (0, 8):	    CT:40	    TAT:40	    WT:32
+Process 5 (11, 8):	    CT:42	    TAT:31	    WT:23
+Process 6 (11, 6):	    CT:37	    TAT:26	    WT:20
+Process 7 (11, 4):	    CT:38	    TAT:27	    WT:23
+Process 8 (11, 2):	    CT:23	    TAT:12	    WT:10
+Process 9 (11, 1):	    CT:24	    TAT:13	    WT:12
+Avg TAT:20.600000
+Avg WT:16.400000
+
+Comments:
+Shortest job first seems to have better average values of TAT and WT, FCFS is on the 2nd place, round-robin was the slowest in these metrics.
+I think it happens because SJF lets the smallest tasks run first which has a great impact on this statistics: their TAT and WT become comparably
+small and this can be seen in the result. However, all algorithms managed to complete all tasks in the same time (42), so overall performance
+seems to be equal across these approaches in this case.
+
+Test input (withound 2nd row for ex 1 and 2):
+14
+3
+0 1 
+0 1
+0 1
+3 1
+3 2
+3 3
+7 3
+7 2
+7 1
+13 1
+13 2
+13 3
+17 1
+17 2
+
+FCFS:
+Process 1 (0, 1):	    CT:2	    TAT:2	    WT:1
+Process 2 (0, 1):	    CT:3	    TAT:3	    WT:2
+Process 3 (3, 1):	    CT:4	    TAT:1	    WT:0
+Process 4 (3, 2):	    CT:6	    TAT:3	    WT:1
+Process 5 (3, 3):	    CT:9	    TAT:6	    WT:3
+Process 6 (7, 3):	    CT:12	    TAT:5	    WT:2
+Process 7 (7, 2):	    CT:14	    TAT:7	    WT:5
+Process 8 (7, 1):	    CT:15	    TAT:8	    WT:7
+Process 9 (13, 1):	    CT:16	    TAT:3	    WT:2
+Process 10 (13, 2):	    CT:18	    TAT:5	    WT:3
+Process 11 (13, 3):	    CT:21	    TAT:8	    WT:5
+Process 12 (17, 1):	    CT:22	    TAT:5	    WT:4
+Process 13 (17, 2):	    CT:24	    TAT:7	    WT:5
+Avg TAT:4.571429
+Avg WT:2.857143
+
+SJF:
+Process 0 (0, 1):	    CT:1	    TAT:1	    WT:0
+Process 1 (0, 1):	    CT:2	    TAT:2	    WT:1
+Process 2 (0, 1):	    CT:3	    TAT:3	    WT:2
+Process 3 (3, 1):	    CT:4	    TAT:1	    WT:0
+Process 4 (3, 2):	    CT:6	    TAT:3	    WT:1
+Process 5 (3, 3):	    CT:9	    TAT:6	    WT:3
+Process 6 (7, 3):	    CT:15	    TAT:8	    WT:5
+Process 7 (7, 2):	    CT:12	    TAT:5	    WT:3
+Process 8 (7, 1):	    CT:10	    TAT:3	    WT:2
+Process 9 (13, 1):	    CT:16	    TAT:3	    WT:2
+Process 10 (13, 2):	    CT:18	    TAT:5	    WT:3
+Process 11 (13, 3):	    CT:24	    TAT:11	    WT:8
+Process 12 (17, 1):	    CT:19	    TAT:2	    WT:1
+Process 13 (17, 2):	    CT:21	    TAT:4	    WT:2
+Avg TAT:4.071429
+Avg WT:2.357143
+
+Round-robin:
+Process 0 (0, 1):	    CT:1	    TAT:1	    WT:0
+Process 1 (0, 1):	    CT:2	    TAT:2	    WT:1
+Process 2 (0, 1):	    CT:3	    TAT:3	    WT:2
+Process 3 (3, 1):	    CT:4	    TAT:1	    WT:0
+Process 4 (3, 2):	    CT:6	    TAT:3	    WT:1
+Process 5 (3, 3):	    CT:9	    TAT:6	    WT:3
+Process 6 (7, 3):	    CT:12	    TAT:5	    WT:2
+Process 7 (7, 2):	    CT:14	    TAT:7	    WT:5
+Process 8 (7, 1):	    CT:15	    TAT:8	    WT:7
+Process 9 (13, 1):	    CT:16	    TAT:3	    WT:2
+Process 10 (13, 2):	    CT:18	    TAT:5	    WT:3
+Process 11 (13, 3):	    CT:21	    TAT:8	    WT:5
+Process 12 (17, 1):	    CT:22	    TAT:5	    WT:4
+Process 13 (17, 2):	    CT:24	    TAT:7	    WT:5
+Avg TAT:4.571429
+Avg WT:2.857143
+
+Comments:
+Here SJF had the best avg TAT and WT once again (although with a quite small gap), but FCFS and Round-robing have the same result. It happened
+because we had quantum = 3 in this example and processes' burst were <= quantum. Therefore, it all of them were able to finish within one "lap" of
+the algorithm, and we got the same numbers. We can notice that since all tasks were quite light (in comparison with the 1st test), the difference
+between SJF and others decresed, as there are no heavyweight ones that can impact the statistics that much. All approaches finished the tasks
+together once again.
