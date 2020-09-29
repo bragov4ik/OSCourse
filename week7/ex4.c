@@ -44,7 +44,7 @@ void *my_realloc(void *ptr, size_t size) {
     }
 }
 
-/* implementation with a different interface (doesn't use malloc_usable_size)
+/* implementation with a different interface (doesn't use malloc_usable_size and <malloc.h>)
 
 void *my_realloc(void *ptr, size_t old_size, size_t new_size) {
     if(!ptr) {
