@@ -1,0 +1,6 @@
+Physical address represents actual location of data inside RAM.
+Virtual address, in its turn, is used for easier management of 
+memory (e.g. by using MMU). It is some kind of abstraction, so
+each process can think that it has the whole address space to use 
+for yourself (while in reality it is dynamically allocated/deallocated
+by some memory manager)

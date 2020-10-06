@@ -1,0 +1,4 @@
+Since pages are 8 KB, we need 13 bits to navigate within the page (2^13 = 8K different combinations of bits)
+So we're left with 16-13 = 3 bits to distinguish between different pages. 2^3=8, so we can have up to 8 pages
+in the single-level linear page table.
+Answer: 8
