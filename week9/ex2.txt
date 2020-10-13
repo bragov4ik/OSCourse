@@ -1,0 +1,39 @@
+To get increased number of hits (relatively to misses), we can reference pages with higher counter more than others.
+In order to achieve this, we can construct such data set:
+x1, ... ,x7, r1, r2, r3, ... 
+where x1..x7 are the some numbers that are repeated later and r1..r3 are some random page numbers.
+For example, we can give the program such sequence (ex2_incr.txt)
+
+1 2 3 4 5 6 7 123 645 900 3 2 1 4 7 6 5 452 111 322 7 2 6 4 5 3 1 67 233 898 1 2 3 4 5 6 7 123 645 900 3 2 1 4 7 6 5 452 111 322 7 2 6 4 5 3 1 67 233 898
+
+The results:
+10
+Hit/miss ratio is: 1.307692
+Hits: 34
+Misses: 26
+
+50
+Hit/miss ratio is: 2.750000
+Hits: 44
+Misses: 16
+
+100
+Hit/miss ratio is: 2.750000
+Hits: 44
+Misses: 16
+
+For decreased hit/miss ratio, we can access pages that have not been accessed before. The sequence can be written as:
+x1 x2 ... xn
+where xi!=xj (i!=j) and n any number of frames Since we have 100 as the biggest number of frames, 
+let's use a sequence of 300 numbers. An example of such sequence is
+
+415 581 165 848 862 234 448 84 461 487 276 555 991 491 815 430 425 989 825 785
+
+The result:
+
+10/50/100
+Hit/miss ratio is: 0.000000
+Hits: 0
+Misses: 20
+
+As none of the page numbers repeat here, hit/miss rate is 0. Congratulations!!
