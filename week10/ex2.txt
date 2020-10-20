@@ -1,0 +1,24 @@
+touch ../week1/file.txt
+    // file created with touch
+
+ls ../week1
+    ex1.txt  ex2.txt  ex3.sh  ex4  file.txt  main.c
+
+link ../week1/file.txt  _ex2.txt
+    // created a hard link _ex2.txt to i-node that is "pointed" by file.txt
+
+code _ex2.txt 
+    // access the file
+
+ls -i _ex2.txt 
+    1   587127 _ex2.txt
+    
+find .. -inum 1587127
+    ../week10/_ex2.txt
+    ../week1/file.txt
+    
+find .. -inum 1587127 -exec rm {} \;
+    // all hard links to the file are deleted (file is deleted)
+
+
+// - my comments
