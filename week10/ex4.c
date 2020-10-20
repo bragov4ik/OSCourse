@@ -58,8 +58,10 @@ int main() {
 
         struct stat* statistics = malloc(sizeof(struct stat));
         if (stat(filepath, statistics) == 0) {
-            printf("All names that point to inode %ld: ", statistics->st_ino);
-            list_all_hardlinks(statistics->st_ino);
+            if (statistics->st_nlink >= 2) {
+                printf("All names that point to inode %ld (number of hard links => 2): ", statistics->st_ino);
+                list_all_hardlinks(statistics->st_ino);
+            }
         }
     }
     free(filepath);
