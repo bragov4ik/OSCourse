@@ -1,0 +1,40 @@
+1)
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    printf("Hello");
+    fork();
+    printf("\n");
+    return 0; 
+}
+
+Output:
+"Hello
+Hello
+"
+
+2)
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    printf("Hello\n");
+    fork();
+    printf("\n");
+    return 0; 
+}
+
+Output:
+"Hello
+
+
+"
+
+So in 1) when fork happens the buffer is non empty and it is copied to the child process, therefore when executing
+`printf("\n");` the buffer is emptied in one of the processes and "Hello\n" is printed for each of them (therefore
+we have such output).
+
+In 2) the buffer is empty when making a fork, so the child process doesn't write "Hello" anymore, only "\n"
