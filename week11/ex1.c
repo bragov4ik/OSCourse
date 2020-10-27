@@ -14,11 +14,11 @@ int main() {
         printf("error in fstat");
         return -1;
     }
-    void *mapped_area = mmap(NULL, file_statistics->st_size, PROT_READ | PROT_WRITE, MAP_SHARED, file_descriptor, 0);
     if(ftruncate(file_descriptor, sizeof(char)*18)) {
         printf("error in ftruncate");
         return -1;
     }
+    void *mapped_area = mmap(NULL, file_statistics->st_size, PROT_READ | PROT_WRITE, MAP_SHARED, file_descriptor, 0);
     char str[19]= "This is a nice day";
     memcpy(mapped_area, str, 18);
     munmap(mapped_area, sizeof(char)*18);
