@@ -1,0 +1,74 @@
+32M file:
+
+Without O_SYNC      With O_SYNC
+
+Buffer 1024 KB
+~/Documents/Studying/OS/week12$ time ./copy fileA fileB
+
+real	0m0,230s    real	0m1,148s
+user	0m0,000s    user	0m0,000s
+sys	0m0,036s        sys	0m0,055s
+
+Buffer 1024 bytes
+~/Documents/Studying/OS/week12$ time ./copy fileA fileB
+
+real	0m0,258s    // too long
+user	0m0,008s
+sys	0m0,061s
+
+Buffer 128 bytes
+~/Documents/Studying/OS/week12$ time ./copy fileA fileB
+
+real	0m0,567s    // too long
+user	0m0,012s
+sys	0m0,313s
+
+Buffer 1 byte
+~/Documents/Studying/OS/week12$ time ./copy fileA fileB
+
+real	0m36,350s    // too long
+user	0m1,872s
+sys	0m34,349s
+
+
+
+1.2K file:
+
+Without O_SYNC      With O_SYNC
+
+Buffer 1024 KB
+~/Documents/Studying/OS/week12$ time ./copy fileA fileB
+
+real	0m0,002s    real	0m0,037s
+user	0m0,000s    user	0m0,000s
+sys	0m0,002s        sys	0m0,003s
+
+Buffer 1024 bytes
+~/Documents/Studying/OS/week12$ time ./copy fileA fileB
+
+real	0m0,001s    real	0m0,067s
+user	0m0,001s    user	0m0,002s
+sys	0m0,000s        sys	0m0,000s
+
+Buffer 128 bytes
+~/Documents/Studying/OS/week12$ time ./copy fileA fileB
+
+real	0m0,001s    real	0m0,257s
+user	0m0,001s    user	0m0,002s
+sys	0m0,000s        sys	0m0,000s
+
+Buffer 1 byte
+~/Documents/Studying/OS/week12$ time ./copy fileA fileB
+
+real	0m0,005s    real	0m46,765s
+user	0m0,000s    user	0m0,005s
+sys	0m0,005s        sys	0m0,135s
+
+
+
+Explanation:
+Apparentely the bigger the buffer size the better performance is until its size becomes close to
+the one of the file. It can be seen on 1.2KB file example. If the buffer reaches 1KB the time spent
+on copying increases (although only slightly). Synchronization increases the time significantly
+(as we can see everywhere). In fact for the file with size 32MB it is so large that I wasn't able
+to wait enough time for the file to fully copy.
