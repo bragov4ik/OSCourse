@@ -1,0 +1,33 @@
+Recovery strategy can be used when it's feasible to create "checkpoints".
+Sometimes it's hard or even impossible to recover to them, so in the cases
+when we can't use the checkpoints due to out inability to recover to
+them or when it takes too much time and resources to do so, we might
+prefer other methods.
+
+
+Avoidance can be used when we know how much resources the processes will
+use in advance, which is usually not true. However, in special cases, when
+this applies, we can use such approach.
+
+
+Prevention is dealt with by attacking conditions for deadlock.
+
+* Mutual-exclusion can be prevented when it's possible to not allow processes
+to claim the resource, e.g. by spooling. It is sometimes impossible due
+to specifics of resources.
+
+* Hold-and-Wait can be prevented by requesting all the resources at once,
+so it seems like not a good way performance-wise. Also, this can 
+potentially lead to livelock.
+
+* No-preemtion is solved either by taking back the resources with force
+(nearly impossible) or by virtualizing resources which doesn't quite
+solve the problem.
+
+* Circular wait is targeted by, for example, allowing to claim only one
+resource per process at a time. It will lead to very poor performance
+in most cases, so we throw it away. Another approach is to number of the
+resources and allow processes to get new resources whose number is >
+than numbers of already claimed ones (so resource graph is free of cycles)./
+It also restricts the number of resources the process can have, but not
+that dramatically, so it seems quite possible to use in some cases.
